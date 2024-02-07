@@ -1,0 +1,22 @@
+ <!-- primero, creo mi html. luego añado las funcionalidades. primero creo la funcion que añade las tareas (addTask). Luego en el input, de las nuevas tareas escritas se las paso a los ul mediante en un for que recorre la tarea añadida, ya que en el ts hicimos que sea un array. En el ul, creo un ngFor para recorrer el array de tasks y poder pasarlas en formato li. En el boton del li creamos las funciones, completeTask y removeTask-->
+<div class="app-container">
+  <section class="title">
+    <h1>TODO-LIST</h1>
+  </section>
+  <section class="add-container">
+    <input [(ngModel)]="newTask" placeholder="Nueva tarea" />
+    <button (click)="addTask()">Agregar tarea</button>
+  </section>
+  <section class="tasks-container">
+    <ul>
+      <li class="li-task-container" *ngFor="let task of tasks; let i = index">
+        <span [class.completed]="task.completed">{{ task.text }}</span>
+        <div class="button-li-container">
+          <button (click)="completeTask(i)">Done!</button>
+          <button (click)="removeTask(i)">Remove!</button>
+        </div>
+
+      </li>
+    </ul>
+  </section>
+</div>

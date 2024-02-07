@@ -1,0 +1,47 @@
+.app-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 300px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background: aqua;
+}
+.title{
+  margin-bottom: 20px;
+}
+.add-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-container input{
+  width: 80%;
+  margin-right: 15px;
+  margin-left: 5px;
+}
+.add-container button{
+  margin-right: 5px;
+}
+.tasks-container{
+  width: 100%;
+}
+.tasks-container li{
+  margin-bottom: 15px;
+  list-style: none;
+}
+.li-task-container{
+  display: flex;
+  justify-content: space-between;
+}
+.button-li-container{
+  width: 50%;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+.completed {
+  text-decoration: line-through red;
+}
